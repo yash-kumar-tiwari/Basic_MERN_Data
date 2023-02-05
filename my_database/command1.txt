@@ -1,0 +1,285 @@
+(base) administrator@l1mn3:~$ sudo service mongod start
+[sudo] password for administrator: 
+Sorry, try again.
+[sudo] password for administrator: 
+(base) administrator@l1mn3:~$ mongo
+MongoDB shell version v4.4.15
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("dc4c4493-2a4e-4b80-8cd4-e90a56edb808") }
+MongoDB server version: 4.4.15
+---
+The server generated these startup warnings when booting: 
+        2022-10-11T10:21:53.062+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2022-10-11T10:21:54.741+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> 
+> show dbs
+admin              0.000GB
+config             0.000GB
+employeedb         0.000GB
+local              0.000GB
+mernstackbatch89   0.000GB
+product-inventory  0.000GB
+productdb          0.000GB
+stackbatch45       0.000GB
+stackbatch910new   0.000GB
+> use stackbatch1011
+switched to db stackbatch1011
+> show dbs
+admin              0.000GB
+config             0.000GB
+employeedb         0.000GB
+local              0.000GB
+mernstackbatch89   0.000GB
+product-inventory  0.000GB
+productdb          0.000GB
+stackbatch45       0.000GB
+stackbatch910new   0.000GB
+> 
+> db.createCollection("data1",{'size':10000,'max':100,"capped":true})
+{ "ok" : 1 }
+> show dbs
+admin              0.000GB
+config             0.000GB
+employeedb         0.000GB
+local              0.000GB
+mernstackbatch89   0.000GB
+product-inventory  0.000GB
+productdb          0.000GB
+stackbatch1011     0.000GB
+stackbatch45       0.000GB
+stackbatch910new   0.000GB
+> show collections
+data1
+> 
+
+
+
+
+> db.createCollection("data")
+{ "ok" : 1 }
+> show collections
+data
+data1
+> db.
+Display all 101 possibilities? (y or n)
+db.adminCommand(                   db.getWriteConcern(
+db.aggregate(                      db.grantPrivilegesToRole(
+db.auth(                           db.grantRolesToRole(
+db.changeUserPassword(             db.grantRolesToUser(
+db.cloneDatabase(                  db.groupeval(
+db.commandHelp(                    db.hasOwnProperty
+db.constructor                     db.hello(
+db.copyDatabase(                   db.help(
+db.createCollection(               db.hostInfo(
+db.createRole(                     db.isMaster(
+db.createUser(                     db.killOP(
+db.createView(                     db.killOp(
+db.currentOP(                      db.listCommands(
+db.currentOp(                      db.loadServerScripts(
+db.data                            db.logout(
+db.data1                           db.printCollectionStats(
+db.dbEval(                         db.printReplicationInfo(
+db.disableFreeMonitoring(          db.printSecondaryReplicationInfo(
+db.dropAllRoles(                   db.printShardingStatus(
+db.dropAllUsers(                   db.printSlaveReplicationInfo(
+db.dropDatabase(                   db.propertyIsEnumerable
+db.dropRole(                       db.prototype
+db.dropUser(                       db.removeUser(
+db.enableFreeMonitoring(           db.resetError(
+db.eval(                           db.revokePrivilegesFromRole(
+db.forceError(                     db.revokeRolesFromRole(
+db.fsyncLock(                      db.revokeRolesFromUser(
+db.fsyncUnlock(                    db.runCommand(
+db.getCollection(                  db.runCommandWithMetadata(
+db.getCollectionInfos(             db.runReadCommand(
+db.getCollectionNames(             db.serverBits(
+db.getFreeMonitoringStatus(        db.serverBuildInfo(
+db.getLastError(                   db.serverCmdLineOpts(
+db.getLastErrorCmd(                db.serverStatus(
+db.getLastErrorObj(                db.setLogLevel(
+db.getLogComponents(               db.setProfilingLevel(
+db.getMongo(                       db.setSecondaryOk(
+db.getName(                        db.setSlaveOk(
+db.getProfilingLevel(              db.setWriteConcern(
+db.getProfilingStatus(             db.shutdownServer(
+db.getQueryOptions(                db.stats(
+db.getReplicationInfo(             db.toLocaleString
+db.getRole(                        db.toString(
+db.getRoles(                       db.tojson(
+db.getSecondaryOk(                 db.unsetWriteConcern(
+db.getSession(                     db.updateRole(
+db.getSiblingDB(                   db.updateUser(
+db.getSisterDB(                    db.valueOf(
+db.getSlaveOk(                     db.version(
+db.getUser(                        db.watch(
+db.getUsers(
+> db.
+... 
+... 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> db.data.insert({"rno":1001,"name":"jarvis","phy":23,"che":67,"mat":76})
+WriteResult({ "nInserted" : 1 })
+> db.data.insert({"rno":1002,"name":"jany","phy":13,"che":61,"mat":16})
+WriteResult({ "nInserted" : 1 })
+> db.data.insert([{"rno":1003,"name":"john","phy":21,"che":44,"mat":66},{"rno":1004,"name":"ravi","phy":22,"che":42,"mat":96}])
+BulkWriteResult({
+	"writeErrors" : [ ],
+	"writeConcernErrors" : [ ],
+	"nInserted" : 2,
+	"nUpserted" : 0,
+	"nMatched" : 0,
+	"nModified" : 0,
+	"nRemoved" : 0,
+	"upserted" : [ ]
+})
+> db.data.insert([{"rno":1003,"name":"john","phy":21,"che":44,"mat":66},{"rno":1004,"name":"ravi","phy":22,"che":42,"mat":96}])
+> db.data.insert({"_id":1005,"name":"test","phy":2,"che":4,"mat":6})
+WriteResult({ "nInserted" : 1 })
+> db.data.insert({"_id":1005,"name":"test","phy":2,"che":4,"mat":6})
+WriteResult({
+	"nInserted" : 0,
+	"writeError" : {
+		"code" : 11000,
+		"errmsg" : "E11000 duplicate key error collection: stackbatch1011.data index: _id_ dup key: { _id: 1005.0 }"
+	}
+})
+> 
+
+
+
+
+
+
+
+
+> db.data.insertOne({"rno":1006,"name":"test1","phy":13,"che":17,"mat":26})
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("634501b3b185b7ef52c52c5f")
+}
+> db.data.insertMany([{"rno":1007,"name":"test2","phy":2,"che":4,"mat":60},{"rno":1008,"name":"ravi1","phy":99,"che":88,"mat":91}])
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("6345020ab185b7ef52c52c60"),
+		ObjectId("6345020ab185b7ef52c52c61")
+	]
+}
+> 
+
+
+
+
+> db.data.find()
+{ "_id" : ObjectId("63450043b185b7ef52c52c5b"), "rno" : 1001, "name" : "jarvis", "phy" : 23, "che" : 67, "mat" : 76 }
+{ "_id" : ObjectId("63450055b185b7ef52c52c5c"), "rno" : 1002, "name" : "jany", "phy" : 13, "che" : 61, "mat" : 16 }
+{ "_id" : ObjectId("634500a7b185b7ef52c52c5d"), "rno" : 1003, "name" : "john", "phy" : 21, "che" : 44, "mat" : 66 }
+{ "_id" : ObjectId("634500a7b185b7ef52c52c5e"), "rno" : 1004, "name" : "ravi", "phy" : 22, "che" : 42, "mat" : 96 }
+{ "_id" : 1005, "name" : "test", "phy" : 2, "che" : 4, "mat" : 6 }
+{ "_id" : ObjectId("634501b3b185b7ef52c52c5f"), "rno" : 1006, "name" : "test1", "phy" : 13, "che" : 17, "mat" : 26 }
+{ "_id" : ObjectId("6345020ab185b7ef52c52c60"), "rno" : 1007, "name" : "test2", "phy" : 2, "che" : 4, "mat" : 60 }
+{ "_id" : ObjectId("6345020ab185b7ef52c52c61"), "rno" : 1008, "name" : "ravi1", "phy" : 99, "che" : 88, "mat" : 91 }
+> db.data.find().pretty()
+{
+	"_id" : ObjectId("63450043b185b7ef52c52c5b"),
+	"rno" : 1001,
+	"name" : "jarvis",
+	"phy" : 23,
+	"che" : 67,
+	"mat" : 76
+}
+{
+	"_id" : ObjectId("63450055b185b7ef52c52c5c"),
+	"rno" : 1002,
+	"name" : "jany",
+	"phy" : 13,
+	"che" : 61,
+	"mat" : 16
+}
+{
+	"_id" : ObjectId("634500a7b185b7ef52c52c5d"),
+	"rno" : 1003,
+	"name" : "john",
+	"phy" : 21,
+	"che" : 44,
+	"mat" : 66
+}
+{
+	"_id" : ObjectId("634500a7b185b7ef52c52c5e"),
+	"rno" : 1004,
+	"name" : "ravi",
+	"phy" : 22,
+	"che" : 42,
+	"mat" : 96
+}
+{ "_id" : 1005, "name" : "test", "phy" : 2, "che" : 4, "mat" : 6 }
+{
+	"_id" : ObjectId("634501b3b185b7ef52c52c5f"),
+	"rno" : 1006,
+	"name" : "test1",
+	"phy" : 13,
+	"che" : 17,
+	"mat" : 26
+}
+{
+	"_id" : ObjectId("6345020ab185b7ef52c52c60"),
+	"rno" : 1007,
+	"name" : "test2",
+	"phy" : 2,
+	"che" : 4,
+	"mat" : 60
+}
+{
+	"_id" : ObjectId("6345020ab185b7ef52c52c61"),
+	"rno" : 1008,
+	"name" : "ravi1",
+	"phy" : 99,
+	"che" : 88,
+	"mat" : 91
+}
+> db.data.find().pretty()
+> db.data.find({"rno":1001}).pretty()
+{
+	"_id" : ObjectId("63450043b185b7ef52c52c5b"),
+	"rno" : 1001,
+	"name" : "jarvis",
+	"phy" : 23,
+	"che" : 67,
+	"mat" : 76
+}
+> db.data.find({"rno":1001},{"phy":1}).pretty()
+{ "_id" : ObjectId("63450043b185b7ef52c52c5b"), "phy" : 23 }
+> db.data.find({"rno":1001},{"phy":1,"_id":0}).pretty()
+{ "phy" : 23 }
+> db.data.find({"rno":1002,"name":"jany"},{"phy":1,"_id":0}).pretty()
+{ "phy" : 13 }
+> db.data.find({"rno":1002,"name":"jany"}).pretty()
+{
+	"_id" : ObjectId("63450055b185b7ef52c52c5c"),
+	"rno" : 1002,
+	"name" : "jany",
+	"phy" : 13,
+	"che" : 61,
+	"mat" : 16
+}
+> db

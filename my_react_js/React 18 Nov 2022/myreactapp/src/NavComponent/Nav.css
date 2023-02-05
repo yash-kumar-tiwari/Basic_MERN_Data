@@ -1,0 +1,15 @@
+#nav
+{
+  height:5%;
+  width: 100%;
+  background-color:crimson;
+  text-align: center;
+  padding: 10px;
+}
+
+#nav a
+{
+  margin: 0 2% 0 2%;
+  color: wheat;
+  font-weight: bolder;
+}

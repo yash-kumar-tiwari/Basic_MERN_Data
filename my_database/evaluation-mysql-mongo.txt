@@ -1,0 +1,54 @@
+Implementation of 'Facebook Post' using MySQL & MongoDB :-
+
+-> MongoDB implementation
+
+pDetails=[
+{
+pid:"",
+uid:"",
+pdescription:"",
+pattachement:"",
+paccess:"",
+pcomments:[{
+    cid:"",
+    pid:"",
+    cdescription:"",
+    cinfo:""
+},{},{},.................,{}],
+plikes:[{
+
+},{},{},.................,{}],
+plikes:
+pinfo:""
+}
+
+,{},{},{},.................,{}]
+
+----------------------------------------------------------------------
+
+-> MySQL implementation
+
+table 1 : post_details
+
+pid int PrimaryKey AutoIncrement,
+uid varchar(50)
+pdescription vc(100)
+pattachement vc(100)
+paccess vc(10)
+pinfo dt
+
+table 2 : comment_details 
+
+cid int PrimaryKey AI
+pid int foreign key (pid of post_details)
+cdescription vc(100)
+cinfo dt
+
+table 3 : like_details 
+
+lid int PrimaryKey AI
+pid int foreign key (pid of post_details)
+linfo dt
+
+
+ 

@@ -1,0 +1,57 @@
+#container
+{
+  height: 650px;
+  width:100%;
+  background-color: aqua;
+  text-align: center;
+}
+
+#header
+{
+  height: 23%;
+  width: 100%;
+  background-color:wheat;
+  text-align: center;
+}
+
+#nav
+{
+  height:7%;
+  width: 100%;
+  background-color:crimson;
+  text-align: center;
+}
+
+#content
+{
+  height: 55%;
+  width: 100%;
+  background-color: coral;
+  text-align: center;
+}
+
+#main
+{
+  height: 100%;
+  width: 70%;
+  background-color: cadetblue;
+  float: left;
+  text-align: center;
+}
+
+#sidebar
+{
+  height: 100%;
+  width: 30%;
+  background-color: darkolivegreen;
+  float: left;
+  text-align: center;
+}
+
+#footer
+{
+  height: 15%;
+  width: 100%;
+  background-color: tan;
+  text-align: center;
+}

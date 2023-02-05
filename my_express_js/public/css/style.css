@@ -1,0 +1,28 @@
+body
+{
+    background-color: aquamarine;
+}
+
+h1
+{
+    color:coral;
+}
+
+h2
+{
+    color:darkgoldenrod;
+}
+
+a
+{
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+}
+
+ul li 
+{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 40px;
+}

@@ -1,0 +1,34 @@
+MySQL vs MongoDB :-
+
+SQL (MySQL) key points:-
+
+-> SQL based database
+-> As it follows SQL approach to handle data , hence also termed as relational database management system(RDBMS)
+-> As follow RDBMS hence schema based database
+-> It implements keys , relations to handle data
+-> DB architecture
+    * database
+    * table
+    * cols
+    * rows 
+
+----------------------------------------------------------------------
+
+No-SQL (MongoDB) key points:-
+
+-> No-SQL based database
+-> As it follows No-SQL approach to handle data , hence also termed as document oreinted database management system(Document Oreinted DBMS)
+-> As follow DODBMS hence schema less database
+-> It donot implements keys , relations to handle data
+-> DB architecture
+    
+    * Database : It is virtual storage , will come in existance as per data
+
+    * Collection : It is storage of multiple document , where each document can be of different-different key-value pair
+
+    * Document : It is JS object capable to store record in the form of key value pair
+
+    * Field : key of JS object (document) is field
+
+----------------------------------------------------------------------
+       

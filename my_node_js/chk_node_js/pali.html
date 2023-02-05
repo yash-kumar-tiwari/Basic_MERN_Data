@@ -1,0 +1,25 @@
+<script>
+  function palindrome(n) 
+  {
+    var temp,
+      rem,
+      rev = 0;
+    temp = n;
+
+    while (n > 0) 
+    {
+      rem = n % 10;
+      rev = rev * 10 + rem;
+      n = parseInt(n / 10);
+    }
+
+    if (rev == temp) 
+    {
+      document.write("Palindrome");
+    } 
+    else document.write("Not Palindrome");
+  }
+  var num;
+  num = prompt("Enter Number: ");
+  palindrome(num);
+</script>

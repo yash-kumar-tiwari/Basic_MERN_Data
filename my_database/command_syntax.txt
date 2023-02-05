@@ -1,0 +1,39 @@
+Collections : Mongodb collections are set of documents , where each document will be a JS object. Each object contains key value pair , & collection can store multiple document of same as well as different key value pair
+
+----------------------------------------------------------------------
+
+Types of collections :-
+
+-> Capped collection : Collection with restrictions are capped like restrictions for total size , no. of documents , capped nature
+
+syntax : db.createCollection("collection_name",{restrictions}) 
+
+eg : db.createCollection("data1",{'size':10000,'max':100,"capped":true})
+
+Note : this collection once created cannot be manupulated as per requirement
+
+----------------------------------------------------------------------
+
+-> Un-Capped collection : Collection without restrictions are un-capped
+
+syntax : db.createCollection("collection_name") 
+
+eg : db.createCollection("data")
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+CRUD Operations :-
+
+c - create - insert
+r - read - select
+u - update - edit
+d - delete - remove
+
+
+
+
+
+
+
+

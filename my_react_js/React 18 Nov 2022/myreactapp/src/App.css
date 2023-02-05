@@ -1,0 +1,15 @@
+#container
+{
+  height: 615px;
+  width:100%;
+  background-color: aqua;
+  text-align: center;
+}
+
+#content
+{
+  height: 55%;
+  width: 100%;
+  background-color: coral;
+  text-align: center;
+}
